@@ -1,16 +1,55 @@
 const sqlite3 = require('sqlite3').verbose();
 
-let db = new sqlite3.Database('./db/enterpriseFhirDatabase.db', (error) => {
-    if(error) {
-        console.log(error)
-    }
-});
+function createDBConnection() {
+    const db = new sqlite3.Database('./db/enterpriseFhirDatabase.db', (err) => {
+        if(err) {
+            throw err
+        }
+    });
+    return db;
+}
 
-db.all("SELECT * FROM COMPANY", (err, rows) => {
-    if (err) {
-      throw err;
-    }
-    console.log(rows); // Array de resultados
-});
+function insertDBPatient(data) {
+    const db = createDBConnection();
 
-db.close()
+    const sql = `INSERT INTO patients (nome, email, telefone, data_nascimento, status, fhir_id) 
+    VALUES (?, ?, ?, ?, ?, ?);`
+
+    const params = [data.paciente, data.email, data.phone, data.nascimento, data.status, data.fhirID];
+
+    db.run(sql, params, (err) => {
+        if(err) {
+            return console.log(err.message)
+        }
+        console.log("Nova linha adicionada na tabela patients")
+    })
+
+    db.close()
+}
+
+function listAllPatients() {
+
+    return new Promise((resolve, reject) => {
+
+        const db = createDBConnection();
+        const sql = "SELECT * FROM patients";
+
+        db.all(sql, (err, rows) => {
+            if (err) {
+                reject(err)
+            }
+            resolve(rows)
+        });
+
+        db.close()
+
+    })
+
+}
+
+
+module.exports = {
+    createDBConnection,
+    insertDBPatient,
+    listAllPatients
+};

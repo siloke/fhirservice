@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="./styles.css" />
 
-    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=iJNEgEccotMAWcZXZuncQgh4X0mgDzhFO5DoC8Y9x2fK9OS_vpNBXqm4mrZxH4X6GQXZOUnk_CDETE0EEsRVtvBKcRFrx3cliyqvUqGh2VRqd0cLbxe46dNKh6uGRCsNr8snzfpkdV0qwCN8KlQqjZW-jjbHIE6D5sjDElKXiEuu1MZbLkRrnPtFFitzNX1nk05VO8keXiBsTZeQqQJuKQoySpGlIti0wv5ciqDge5QKW4u4fGK4O4863yZHy0-6eGhZKv09cQY_O8_J2gNuDA" charset="UTF-8"></script><script defer src="./script.js"></script>
+    <script defer src="./script.js"></script>
 </head>
 <body>
     <div class="sidebar">
@@ -615,8 +615,8 @@
     </div>
 
     <div id="modal">
-        <form id="modal-form">
-            <a href="#" id="modal-close">
+        <form action="/enviarPaciente" method="post" id="modal-form">
+            <a href="/" id="modal-close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                     <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
                 </svg>
@@ -624,10 +624,16 @@
 
             <h2>Cadastrar paciente</h2>
 
-            <input class="form-input" type="text" name="paciente" id="paciente" placeholder="Paciente" required />
-            <input class="form-input" type="email" name="email" id="email" placeholder="E-mail" required />
-            <input class="form-input" type="text" name="phone" id="phone" placeholder="Telefone" required />
-            <input class="form-input" type="datetime-local" name="nascimento" id="nascimento" placeholder="Data de nascimento" required />
+            <label for="paciente">Nome</label>
+            <input class="form-input" type="text" name="paciente" id="paciente" placeholder="Nome do paciente" required />
+            <label for="email">E-mail</label>
+            <input class="form-input" type="email" name="email" id="email" placeholder="Ex: joao@gmail.com" required />
+            <label for="phone">Telefone</label>
+            <input class="form-input" type="text" name="phone" id="phone" placeholder="Telefone de contato" required />
+            <label for="profissional">Profissional</label>
+            <input class="form-input" type="text" name="profissional" id="profissional" placeholder="Profissional vinculado" required />
+            <label for="nascimento">Data de Nascimento</label>
+            <input class="form-input" type="date" name="nascimento" id="nascimento" placeholder="Data de nascimento" required />
             <button type="submit" class="btn form-submit">Cadastrar</button>
         </form>
     </div>

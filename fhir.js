@@ -28,45 +28,33 @@ async function getAuthToken() {
 
 }
 
-async function postPatient(accessToken) {
+async function postFhirPatient(accessToken, dataClient) {
+
+    //Parsing string from client input to boolean
+    dataClient.status = dataClient.status === "true";
 
     const dataPatient = {
       "resourceType": "Patient",
-      "id": "example-paciente",
-      "identifier": [
-        {
-          "use": "official",
-          "system": "http://registrodopaciente.org",
-          "value": "987654321"
-        },
-        {
-          "use": "usual",
-          "system": "http://cns.saude.gov.br",
-          "value": "123456789012345"
-        }
-      ],
       "active": true,
       "name": [
         {
           "use": "official",
           "given": [
-            "Maria"
+            dataClient.paciente
           ]
         }
       ],
       "telecom": [
         {
           "system": "email",
-          "value": "john.doe@email.com",
-        }
-      ],
-      "birthDate": "1985-07-10",
-      "generalPractitioner": [
+          "value": dataClient.email,
+        },
         {
-          "reference": "Practitioner/12345", 
-          "display": "Dr. Jane Smith"
+          "system": "phone",
+          "value": dataClient.phone,
         }
       ],
+      "birthDate": dataClient.nascimento,
     };
 
     const config = {
@@ -78,9 +66,11 @@ async function postPatient(accessToken) {
             "Content-type": "application/json"
         }
     }
+
     const resposta = await axios(config);
+    console.log(resposta.data)
     
-  return resposta.data.id;
+    return resposta.data.id;
 
 }
 
@@ -91,6 +81,6 @@ async function postPatient(accessToken) {
 
 module.exports = {
   getAuthToken,
-  postPatient
+  postFhirPatient
 };
 
