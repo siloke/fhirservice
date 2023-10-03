@@ -14,9 +14,21 @@ a {
     text-decoration: none;
 }
 
+#sidebar-group {
+    width: 100%;
+    max-width: 400px;
+    background-color: #FFF;
+    box-shadow: 0 0 10px #0005;
+    /* padding: 10px 10px 0px 0px; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+}
+
 .sidebar {
     min-height: 100vh;
-    width: 4%;
+    width: 25%;
     border-right: 1px solid #E2E5E8;
 }
 
@@ -54,29 +66,31 @@ a {
 .sidebar-menu {
     background-color: #FFFFFF;
     min-height: 100vh;
-    width: 15%;
-    display: flex;
+    width: 100%;
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; */
+    margin-top: 40px;
 }
 
 .list {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin: 40px auto;
-    gap: 32px;
+    list-style: none;
+    width: 100%;
 }
 
 .list-item {
+    width: 100%;
+}
+
+.list-item a {
+    font-size: 16px;
     display: flex;
     align-items: center;
     gap: 16px;
-    height: 44px;
-    font-size: 16px;
-    font-weight: 400;
     color: #434D56;
-    list-style-type: none;
+    font-weight: 400;;
+    padding: 20px 10px;
+    width: 100%;
 }
 
 .selected {
@@ -95,14 +109,12 @@ a {
 }
 
 .marker {
+    display: block;
     width: 100%;
     border: 1px solid #C6CCD2;
 }
 
 .profile {
-    width: 90%;
-    height: 72px;
-    margin: 0 auto;
     display: flex;
     gap: 8px;
     align-items: center;
@@ -128,20 +140,49 @@ a {
 .main {
     background-color: #F0F7FF;
     min-height: 100vh;
-    width: 81%;
-    gap: 32px;
+    width: 100%;
+    /* gap: 32px; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.gap {
+    margin-bottom: 32px;
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+    width: 95%;
+}
+
+.hamburguer-wrapper {
+    margin-top: 40px;
+    width: 95%;
+}
+
+.hamburguer {
+    border: none;
+    display: none;
+    /* min-width: 40px; */
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}
+
 .title {
     width: 95%;
     height: 5vh;
-    margin-top: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+.menu-hamburguer {
+    color: #434D56;
+    margin: 10px 0 0 10px;
 }
 
 .text {
@@ -152,8 +193,6 @@ a {
 .btn { 
     font-weight: 600;
     font-size: 12px;
-    width: 167px;
-    height: 32px;
     border: #007FFF;
     border-radius: 4px;
     background-color: #007FFF;
@@ -162,6 +201,7 @@ a {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    padding: 5px 10px;
 }
 
 .btn:hover {
@@ -224,37 +264,43 @@ a {
 
 table {
     width: 100%;
+    overflow-x: auto;
 }
 
 tr {
     display: flex;
     width: 100%;
-    padding: 8px 12px 8px 12px;
+    padding: 8px 12px;
 }
 
 th, td {
     display: flex;
     align-items: center;
     gap: 8px;
-    width: 16%;
     color: #434D56;
     font-size: 14px;
     font-weight: 500;
     word-break: break-all;
+    /* justify-content: space-evenly; */
+    min-width: 225px;
 }
 
 td {
     font-weight: 400;
 }
 
+.action-icons-group {
+    display: flex;
+    gap: 12px;
+}
+
 .td-icon {
-    width: 20%;
-    height: 36px;
     border-radius: 8px;
     background-color: #F0F7FF;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5px;
 }
 
 .td-icon:hover {
@@ -263,6 +309,12 @@ td {
 
 .icon-phone {
     background-color: #E9FBF5;
+}
+
+.text-middle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 #modal {
@@ -319,6 +371,7 @@ td {
     font-family: 'Poppins', sans-serif;
 }
 
+
 .form-submit {
     margin-left: auto;
 }
@@ -328,12 +381,25 @@ td {
         flex-direction: column;
     }
 
-    .sidebar {
-        display: none;
+    .hamburguer-wrapper {
+        margin-bottom: 32px;
     }
 
-    .sidebar-menu {
-        display: none;
+    .hamburguer {
+        display: block;
+    }
+
+    #sidebar-group {
+        position: fixed;
+        /* display: flex; */
+        transform: translateX(-105%);
+        transition: .5s;
+        max-height: 100vh;
+        overflow: auto;
+    }
+
+    #sidebar-group.visible {
+        transform: translateX(0);
     }
 
     .main {
@@ -366,7 +432,7 @@ td {
     }
 
     .item-icon {
-        width: 5%;
+        /* width: 5%; */
         margin-right: 12px;
     }
 
@@ -382,10 +448,10 @@ td {
         display: flex;
         width: 100%;
         justify-content: space-between;
-        margin: 24px 0 ;
+        margin: 24px 0;
     }
 
-    td img {
+    .hide {
         display: none;
     }
 

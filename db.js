@@ -37,7 +37,7 @@ function listAllPatients() {
         SELECT patient_id, patients.nome AS nomepaciente, email, telefone, data_nascimento, status, profissionais.nome AS nomeprofissional
         FROM patients
         INNER JOIN profissionais 
-        ON profissionais.profissionais_id = patients.profissionais_id ORDER BY nomepaciente DESC;`
+        ON profissionais.profissionais_id = patients.profissionais_id ORDER BY patient_id DESC;`
 
         db.all(sql2, (err, rows) => {
             if (err) {

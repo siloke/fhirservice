@@ -12,133 +12,109 @@
     <script defer src="./fetch.js"></script>
 </head>
 <body>
-    <div class="sidebar">
-        <div class="sidebar-btn-wrapper">
-            <button class="sidebar-btn blue-btn">ME</button>
-            <button class="sidebar-btn add-btn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.25 11.25H12.75V3.75C12.75 3.55109 12.671 3.36032 12.5303 3.21967C12.3897 3.07902 12.1989 3 12 3C11.8011 3 11.6103 3.07902 11.4697 3.21967C11.329 3.36032 11.25 3.55109 11.25 3.75V11.25H3.75C3.55109 11.25 3.36032 11.329 3.21967 11.4697C3.07902 11.6103 3 11.8011 3 12C3 12.1989 3.07902 12.3897 3.21967 12.5303C3.36032 12.671 3.55109 12.75 3.75 12.75H11.25V20.25C11.25 20.4489 11.329 20.6397 11.4697 20.7803C11.6103 20.921 11.8011 21 12 21C12.1989 21 12.3897 20.921 12.5303 20.7803C12.671 20.6397 12.75 20.4489 12.75 20.25V12.75H20.25C20.4489 12.75 20.6397 12.671 20.7803 12.5303C20.921 12.3897 21 12.1989 21 12C21 11.8011 20.921 11.6103 20.7803 11.4697C20.6397 11.329 20.4489 11.25 20.25 11.25Z" fill="#007FFF"/>
-                </svg>
-            </button>
-        </div>
-    </div>
-    <div class="sidebar-menu">
-        <ul class="list">
-            <a href="">
-                <li class="list-item selected">
-                    <svg class="icon-menu" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.6667 6.7625L11.6667 2.37916C11.2083 1.9692 10.615 1.74255 10 1.74255C9.38507 1.74255 8.7917 1.9692 8.33335 2.37916L3.33335 6.7625C3.06866 6.99923 2.85743 7.28963 2.71374 7.61437C2.57005 7.93911 2.4972 8.29073 2.50002 8.64583V15.9292C2.50002 16.5922 2.76341 17.2281 3.23225 17.6969C3.70109 18.1658 4.33698 18.4292 5.00002 18.4292H15C15.6631 18.4292 16.2989 18.1658 16.7678 17.6969C17.2366 17.2281 17.5 16.5922 17.5 15.9292V8.6375C17.5017 8.2838 17.4282 7.93378 17.2846 7.61056C17.1409 7.28735 16.9303 6.99829 16.6667 6.7625ZM11.6667 16.7625H8.33335V12.5958C8.33335 12.3748 8.42115 12.1629 8.57743 12.0066C8.73371 11.8503 8.94567 11.7625 9.16668 11.7625H10.8334C11.0544 11.7625 11.2663 11.8503 11.4226 12.0066C11.5789 12.1629 11.6667 12.3748 11.6667 12.5958V16.7625ZM15.8334 15.9292C15.8334 16.1502 15.7456 16.3621 15.5893 16.5184C15.433 16.6747 15.221 16.7625 15 16.7625H13.3334V12.5958C13.3334 11.9328 13.07 11.2969 12.6011 10.8281C12.1323 10.3592 11.4964 10.0958 10.8334 10.0958H9.16668C8.50364 10.0958 7.86776 10.3592 7.39892 10.8281C6.93008 11.2969 6.66668 11.9328 6.66668 12.5958V16.7625H5.00002C4.779 16.7625 4.56704 16.6747 4.41076 16.5184C4.25448 16.3621 4.16668 16.1502 4.16668 15.9292V8.6375C4.16683 8.51918 4.19218 8.40224 4.24103 8.29448C4.28989 8.18671 4.36113 8.09059 4.45002 8.0125L9.45002 3.6375C9.60209 3.5039 9.79759 3.43022 10 3.43022C10.2024 3.43022 10.3979 3.5039 10.55 3.6375L15.55 8.0125C15.6389 8.09059 15.7101 8.18671 15.759 8.29448C15.8079 8.40224 15.8332 8.51918 15.8334 8.6375V15.9292Z" fill="#007FFF"/>
-                    </svg>
-                    Início
-                </li>
-            </a>
-            <a href="">
-                <li class="list-item">
-                    <svg class="icon-menu" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.875 12.5958C9.11866 12.5958 10.9375 10.777 10.9375 8.53333C10.9375 6.28967 9.11866 4.47083 6.875 4.47083C4.63134 4.47083 2.8125 6.28967 2.8125 8.53333C2.8125 10.777 4.63134 12.5958 6.875 12.5958Z" stroke="#8C99A6" stroke-width="1.5" stroke-miterlimit="10"/>
-                    <path d="M12.1406 4.61926C12.4997 4.52186 12.8701 4.47196 13.2422 4.47083C14.3196 4.47083 15.3529 4.89884 16.1148 5.6607C16.8767 6.42257 17.3047 7.45588 17.3047 8.53333C17.3047 9.61077 16.8767 10.6441 16.1148 11.4059C15.3529 12.1678 14.3196 12.5958 13.2422 12.5958" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M1.25 15.5177C1.88433 14.615 2.72659 13.8783 3.70563 13.3697C4.68467 12.8611 5.77173 12.5956 6.875 12.5956C7.97827 12.5956 9.06533 12.8611 10.0444 13.3697C11.0234 13.8783 11.8657 14.615 12.5 15.5177" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M13.2422 12.5958C14.3455 12.5951 15.4328 12.8603 16.412 13.3689C17.3911 13.8776 18.2333 14.6146 18.8672 15.5177" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Pacientes
-                </li>
-            </a>
-            <a href="">
-                <li class="list-item">
-                    <svg class="icon-menu" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 13.2208C11.3807 13.2208 12.5 12.1015 12.5 10.7208C12.5 9.34011 11.3807 8.22083 10 8.22083C8.61929 8.22083 7.5 9.34011 7.5 10.7208C7.5 12.1015 8.61929 13.2208 10 13.2208Z" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.25 15.0958C6.68663 14.5137 7.2528 14.0411 7.90369 13.7157C8.55457 13.3903 9.27229 13.2208 10 13.2208C10.7277 13.2208 11.4454 13.3903 12.0963 13.7157C12.7472 14.0411 13.3134 14.5137 13.75 15.0958" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16.25 16.9708V3.22083C16.25 2.87565 15.9702 2.59583 15.625 2.59583L4.375 2.59583C4.02982 2.59583 3.75 2.87565 3.75 3.22083V16.9708C3.75 17.316 4.02982 17.5958 4.375 17.5958H15.625C15.9702 17.5958 16.25 17.316 16.25 16.9708Z" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7.5 5.09583H12.5" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Equipe
-                </li>
-            </a>
-            <a href="">
-                <li class="list-item">
-                    <svg class="icon-menu" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.125 5.09583H1.875C1.52982 5.09583 1.25 5.37565 1.25 5.72083V14.4708C1.25 14.816 1.52982 15.0958 1.875 15.0958H18.125C18.4702 15.0958 18.75 14.816 18.75 14.4708V5.72083C18.75 5.37565 18.4702 5.09583 18.125 5.09583Z" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M10 12.5958C11.3807 12.5958 12.5 11.4765 12.5 10.0958C12.5 8.71511 11.3807 7.59583 10 7.59583C8.61929 7.59583 7.5 8.71511 7.5 10.0958C7.5 11.4765 8.61929 12.5958 10 12.5958Z" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M13.75 5.09583L18.75 9.47083" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M13.75 15.0958L18.75 10.7208" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.25 5.09583L1.25 9.47083" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.25 15.0958L1.25 10.7208" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Financeiro
-                </li>
-            </a>
-            <a href="">
-                <li class="list-item">
-                    <svg class="icon-menu" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.5 16.3458H2.5V3.84583" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16.25 5.09583L10 11.3458L7.5 8.84583L2.5 13.8458" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16.25 8.22083V5.09583H13.125" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Relatórios
-                </li>
-            </a>
-            <a href="">
-                <li class="list-item">
-                    <svg class="icon-menu" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.5 16.3458H2.5V3.84583" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16.25 5.09583L10 11.3458L7.5 8.84583L2.5 13.8458" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16.25 8.22083V5.09583H13.125" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Treinamentos
-                </li>
-            </a>
-            <a href="">
-                <li class="list-item">
-                    <svg class="icon-menu" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.75 2.59583V10.0958L11.25 8.22083L8.75 10.0958V2.59583" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.75002 16.9708C3.74898 16.7243 3.79678 16.48 3.89064 16.2521C3.9845 16.0241 4.12257 15.817 4.29689 15.6427C4.4712 15.4684 4.67831 15.3303 4.90626 15.2364C5.13422 15.1426 5.3785 15.0948 5.62502 15.0958H16.25V2.59583H5.62502C5.3785 2.59479 5.13422 2.64259 4.90626 2.73645C4.67831 2.83031 4.4712 2.96838 4.29689 3.1427C4.12257 3.31701 3.9845 3.52412 3.89064 3.75207C3.79678 3.98003 3.74898 4.22431 3.75002 4.47083V16.9708Z" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.75 16.9708V17.5958H15" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Código de Ética
-                </li>
-            </a>
-            <span class="marker"></span>
-            <a href="" >
-                <li class="list-item">
-                    <svg class="icon-menu" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 13.8458C12.0711 13.8458 13.75 12.1669 13.75 10.0958C13.75 8.02476 12.0711 6.34583 10 6.34583C7.92893 6.34583 6.25 8.02476 6.25 10.0958C6.25 12.1669 7.92893 13.8458 10 13.8458Z" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14.3516 5.18176C14.5495 5.36405 14.737 5.55156 14.9141 5.74426L17.0469 6.04895C17.3944 6.65247 17.6622 7.29847 17.8438 7.97083L16.5469 9.69739C16.5469 9.69739 16.5703 10.2286 16.5469 10.4943L17.8438 12.2208C17.6631 12.8935 17.3952 13.5396 17.0469 14.1427L14.9141 14.4474C14.9141 14.4474 14.5469 14.8302 14.3516 15.0099L14.0469 17.1427C13.4434 17.4902 12.7974 17.7581 12.125 17.9396L10.3984 16.6427C10.1333 16.6661 9.86667 16.6661 9.60156 16.6427L7.875 17.9396C7.20236 17.7589 6.55625 17.491 5.95313 17.1427L5.64844 15.0099C5.45573 14.8276 5.26823 14.6401 5.08594 14.4474L2.95312 14.1427C2.60561 13.5392 2.33776 12.8932 2.15625 12.2208L3.45313 10.4943C3.45313 10.4943 3.42969 9.96301 3.45313 9.69739L2.15625 7.97083C2.33692 7.29819 2.60481 6.65208 2.95312 6.04895L5.08594 5.74426C5.26823 5.55156 5.45573 5.36405 5.64844 5.18176L5.95313 3.04895C6.55665 2.70144 7.20265 2.43358 7.875 2.25208L9.60156 3.54895C9.86667 3.52551 10.1333 3.52551 10.3984 3.54895L12.125 2.25208C12.7976 2.43274 13.4437 2.70064 14.0469 3.04895L14.3516 5.18176Z" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Configurações
-                </li>
-            </a>
-            <a href="">
-                <li class="list-item sair">
-                    <svg class="icon-menu" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.5938 6.81458L16.875 10.0958L13.5938 13.3771" stroke="#CD0033" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M8.125 10.0958H16.875" stroke="#CD0033" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M8.125 16.9708H3.75C3.58424 16.9708 3.42527 16.905 3.30806 16.7878C3.19085 16.6706 3.125 16.5116 3.125 16.3458V3.84583C3.125 3.68006 3.19085 3.52109 3.30806 3.40388C3.42527 3.28667 3.58424 3.22083 3.75 3.22083H8.125" stroke="#CD0033" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Sair
-                </li>
-            </a>
-        </ul>
-        <div class="profile">
-            <div class="profile-icon">
-                <img src="./assets/profileicon.svg" alt="">
+    <div id="sidebar-group">
+        <button class="hamburguer menu-hamburguer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+        </button>
+        <div class="flex">
+            <div class="sidebar">
+                <div class="sidebar-btn-wrapper">
+                    <button class="sidebar-btn blue-btn">ME</button>
+                    <button class="sidebar-btn add-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.25 11.25H12.75V3.75C12.75 3.55109 12.671 3.36032 12.5303 3.21967C12.3897 3.07902 12.1989 3 12 3C11.8011 3 11.6103 3.07902 11.4697 3.21967C11.329 3.36032 11.25 3.55109 11.25 3.75V11.25H3.75C3.55109 11.25 3.36032 11.329 3.21967 11.4697C3.07902 11.6103 3 11.8011 3 12C3 12.1989 3.07902 12.3897 3.21967 12.5303C3.36032 12.671 3.55109 12.75 3.75 12.75H11.25V20.25C11.25 20.4489 11.329 20.6397 11.4697 20.7803C11.6103 20.921 11.8011 21 12 21C12.1989 21 12.3897 20.921 12.5303 20.7803C12.671 20.6397 12.75 20.4489 12.75 20.25V12.75H20.25C20.4489 12.75 20.6397 12.671 20.7803 12.5303C20.921 12.3897 21 12.1989 21 12C21 11.8011 20.921 11.6103 20.7803 11.4697C20.6397 11.329 20.4489 11.25 20.25 11.25Z" fill="#007FFF"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <div class="profile-info">
-                <div class="profile-name">Michael Smith</div>
-                <div class="profile-role">Administrador</div>
+    
+            <div class="sidebar-menu">
+                <ul class="list">
+                    <li class="list-item selected">
+                        <a href="">
+                            <svg class="icon-menu" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.6667 6.7625L11.6667 2.37916C11.2083 1.9692 10.615 1.74255 10 1.74255C9.38507 1.74255 8.7917 1.9692 8.33335 2.37916L3.33335 6.7625C3.06866 6.99923 2.85743 7.28963 2.71374 7.61437C2.57005 7.93911 2.4972 8.29073 2.50002 8.64583V15.9292C2.50002 16.5922 2.76341 17.2281 3.23225 17.6969C3.70109 18.1658 4.33698 18.4292 5.00002 18.4292H15C15.6631 18.4292 16.2989 18.1658 16.7678 17.6969C17.2366 17.2281 17.5 16.5922 17.5 15.9292V8.6375C17.5017 8.2838 17.4282 7.93378 17.2846 7.61056C17.1409 7.28735 16.9303 6.99829 16.6667 6.7625ZM11.6667 16.7625H8.33335V12.5958C8.33335 12.3748 8.42115 12.1629 8.57743 12.0066C8.73371 11.8503 8.94567 11.7625 9.16668 11.7625H10.8334C11.0544 11.7625 11.2663 11.8503 11.4226 12.0066C11.5789 12.1629 11.6667 12.3748 11.6667 12.5958V16.7625ZM15.8334 15.9292C15.8334 16.1502 15.7456 16.3621 15.5893 16.5184C15.433 16.6747 15.221 16.7625 15 16.7625H13.3334V12.5958C13.3334 11.9328 13.07 11.2969 12.6011 10.8281C12.1323 10.3592 11.4964 10.0958 10.8334 10.0958H9.16668C8.50364 10.0958 7.86776 10.3592 7.39892 10.8281C6.93008 11.2969 6.66668 11.9328 6.66668 12.5958V16.7625H5.00002C4.779 16.7625 4.56704 16.6747 4.41076 16.5184C4.25448 16.3621 4.16668 16.1502 4.16668 15.9292V8.6375C4.16683 8.51918 4.19218 8.40224 4.24103 8.29448C4.28989 8.18671 4.36113 8.09059 4.45002 8.0125L9.45002 3.6375C9.60209 3.5039 9.79759 3.43022 10 3.43022C10.2024 3.43022 10.3979 3.5039 10.55 3.6375L15.55 8.0125C15.6389 8.09059 15.7101 8.18671 15.759 8.29448C15.8079 8.40224 15.8332 8.51918 15.8334 8.6375V15.9292Z" fill="#007FFF"/>
+                            </svg>
+                            Início
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="">
+                            <svg class="icon-menu" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.875 12.5958C9.11866 12.5958 10.9375 10.777 10.9375 8.53333C10.9375 6.28967 9.11866 4.47083 6.875 4.47083C4.63134 4.47083 2.8125 6.28967 2.8125 8.53333C2.8125 10.777 4.63134 12.5958 6.875 12.5958Z" stroke="#8C99A6" stroke-width="1.5" stroke-miterlimit="10"/>
+                            <path d="M12.1406 4.61926C12.4997 4.52186 12.8701 4.47196 13.2422 4.47083C14.3196 4.47083 15.3529 4.89884 16.1148 5.6607C16.8767 6.42257 17.3047 7.45588 17.3047 8.53333C17.3047 9.61077 16.8767 10.6441 16.1148 11.4059C15.3529 12.1678 14.3196 12.5958 13.2422 12.5958" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.25 15.5177C1.88433 14.615 2.72659 13.8783 3.70563 13.3697C4.68467 12.8611 5.77173 12.5956 6.875 12.5956C7.97827 12.5956 9.06533 12.8611 10.0444 13.3697C11.0234 13.8783 11.8657 14.615 12.5 15.5177" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.2422 12.5958C14.3455 12.5951 15.4328 12.8603 16.412 13.3689C17.3911 13.8776 18.2333 14.6146 18.8672 15.5177" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Pacientes
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="">
+                            <svg class="icon-menu" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 13.2208C11.3807 13.2208 12.5 12.1015 12.5 10.7208C12.5 9.34011 11.3807 8.22083 10 8.22083C8.61929 8.22083 7.5 9.34011 7.5 10.7208C7.5 12.1015 8.61929 13.2208 10 13.2208Z" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.25 15.0958C6.68663 14.5137 7.2528 14.0411 7.90369 13.7157C8.55457 13.3903 9.27229 13.2208 10 13.2208C10.7277 13.2208 11.4454 13.3903 12.0963 13.7157C12.7472 14.0411 13.3134 14.5137 13.75 15.0958" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.25 16.9708V3.22083C16.25 2.87565 15.9702 2.59583 15.625 2.59583L4.375 2.59583C4.02982 2.59583 3.75 2.87565 3.75 3.22083V16.9708C3.75 17.316 4.02982 17.5958 4.375 17.5958H15.625C15.9702 17.5958 16.25 17.316 16.25 16.9708Z" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.5 5.09583H12.5" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Equipe
+                        </a>
+                    </li>
+                </ul>
+                <hr class="marker" />
+                <ul class="list">
+                    <li class="list-item">
+                        <a href="" >
+                            <svg class="icon-menu" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 13.8458C12.0711 13.8458 13.75 12.1669 13.75 10.0958C13.75 8.02476 12.0711 6.34583 10 6.34583C7.92893 6.34583 6.25 8.02476 6.25 10.0958C6.25 12.1669 7.92893 13.8458 10 13.8458Z" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.3516 5.18176C14.5495 5.36405 14.737 5.55156 14.9141 5.74426L17.0469 6.04895C17.3944 6.65247 17.6622 7.29847 17.8438 7.97083L16.5469 9.69739C16.5469 9.69739 16.5703 10.2286 16.5469 10.4943L17.8438 12.2208C17.6631 12.8935 17.3952 13.5396 17.0469 14.1427L14.9141 14.4474C14.9141 14.4474 14.5469 14.8302 14.3516 15.0099L14.0469 17.1427C13.4434 17.4902 12.7974 17.7581 12.125 17.9396L10.3984 16.6427C10.1333 16.6661 9.86667 16.6661 9.60156 16.6427L7.875 17.9396C7.20236 17.7589 6.55625 17.491 5.95313 17.1427L5.64844 15.0099C5.45573 14.8276 5.26823 14.6401 5.08594 14.4474L2.95312 14.1427C2.60561 13.5392 2.33776 12.8932 2.15625 12.2208L3.45313 10.4943C3.45313 10.4943 3.42969 9.96301 3.45313 9.69739L2.15625 7.97083C2.33692 7.29819 2.60481 6.65208 2.95312 6.04895L5.08594 5.74426C5.26823 5.55156 5.45573 5.36405 5.64844 5.18176L5.95313 3.04895C6.55665 2.70144 7.20265 2.43358 7.875 2.25208L9.60156 3.54895C9.86667 3.52551 10.1333 3.52551 10.3984 3.54895L12.125 2.25208C12.7976 2.43274 13.4437 2.70064 14.0469 3.04895L14.3516 5.18176Z" stroke="#8C99A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Configurações
+                        </a>
+                    </li>
+                    <li class="list-item sair">
+                        <a href="">
+                            <svg class="icon-menu" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5938 6.81458L16.875 10.0958L13.5938 13.3771" stroke="#CD0033" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.125 10.0958H16.875" stroke="#CD0033" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.125 16.9708H3.75C3.58424 16.9708 3.42527 16.905 3.30806 16.7878C3.19085 16.6706 3.125 16.5116 3.125 16.3458V3.84583C3.125 3.68006 3.19085 3.52109 3.30806 3.40388C3.42527 3.28667 3.58424 3.22083 3.75 3.22083H8.125" stroke="#CD0033" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Sair
+                        </a>
+                    </li>
+                </ul>
+                <div class="profile">
+                    <div class="profile-icon">
+                        <img src="./assets/profileicon.svg" alt="">
+                    </div>
+                    <div class="profile-info">
+                        <div class="profile-name">Michael Smith</div>
+                        <div class="profile-role">Administrador</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="main">
-        <div class="title">
+        <div class="hamburguer-wrapper">
+            <button class="hamburguer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="title gap">
             <h2 class="text">Pacientes</h2>
             <a class="btn" href="#modal">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.5 8H13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M8 2.5V13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg> Adicionar Paciente
+                </svg> Cadastrar Paciente
             </a>
         </div>
-        <div class="summary">
+        <div class="summary gap">
             <div class="summary-item">
                 <div class="item-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
