@@ -311,7 +311,7 @@ td {
     color: #434D56
 }
 
-.form-input {
+.form-input, select {
     line-height: 2;
     padding: 5px 10px;
     border: 1px solid #CCC;

@@ -30,9 +30,6 @@ async function getAuthToken() {
 
 async function postFhirPatient(accessToken, dataClient) {
 
-    //Parsing string from client input to boolean
-    dataClient.status = dataClient.status === "true";
-
     const dataPatient = {
       "resourceType": "Patient",
       "active": true,
@@ -67,8 +64,13 @@ async function postFhirPatient(accessToken, dataClient) {
         }
     }
 
-    const resposta = await axios(config);
-    console.log(resposta.data)
+    let resposta
+    try {
+      resposta = await axios(config);
+    }
+    catch(err) {
+      throw err;
+    }
     
     return resposta.data.id;
 

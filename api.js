@@ -7,6 +7,7 @@ const {
 const { 
     insertDBPatient,
     listAllPatients,
+    listAllPractitioners
 } = require('./db.js');
 
 const app = express();
@@ -23,9 +24,9 @@ app.post("/enviarPaciente", async (req, res) => {
     }
     else {
         const token = await getAuthToken();
-        console.log(data)
         const id = await postFhirPatient(token, data)
         data.fhirID = id;
+        console.log(data)
         insertDBPatient(data)
 
         res.redirect("/index.html")
@@ -34,16 +35,31 @@ app.post("/enviarPaciente", async (req, res) => {
 
 app.get("/listarPacientes", async (req, res) => {
     
-    let list;
+    let listPatients;
     try {
-        list = await listAllPatients();
+        listPatients = await listAllPatients();
     }
     catch(err) {
         throw err;
     }
 
-    res.send(list);
+    res.send(listPatients);
 })
+
+app.get("/listarProfissionais", async (req, res) => {
+    
+    let listPractitioners;
+    try {
+        listPractitioners = await listAllPractitioners();
+    }
+    catch(err) {
+        throw err;
+    }
+
+    res.send(listPractitioners);
+})
+
+
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
