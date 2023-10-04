@@ -65,6 +65,7 @@ async function postFhirPatient(accessToken, dataClient) {
     }
 
     let resposta
+    
     try {
       resposta = await axios(config);
     }

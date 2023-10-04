@@ -1,19 +1,34 @@
 window.addEventListener('DOMContentLoaded', async (e) => {
-    const fetchPatients = await fetch("/listarPacientes");
-    const dataPatients = await fetchPatients.json()
 
-    const fetchProfissionais = await fetch("/listarProfissionais");
-    const dataProfissionais = await fetchProfissionais.json()
+    let dataPatients;
+    let dataProfissionais;
+    
+    try {
+        const fetchPatients = await fetch("/listarPacientes");
+        dataPatients = await fetchPatients.json()
+    
+        const fetchProfissionais = await fetch("/listarProfissionais");
+        dataProfissionais = await fetchProfissionais.json()
+    }
+    catch (err) {
+        throw err
+    }
 
     console.log(dataPatients)
     console.log(dataProfissionais)
+
+
+    document.querySelector(".total-pacientes").innerHTML = dataPatients.length;
+    let pacientesAtivos = dataPatients.filter((element) => element.status == "Ativo");
+    document.querySelector(".pacientes-ativos").innerHTML = pacientesAtivos.length;
+    let pacientesInativos = dataPatients.filter((element) => element.status == "Inativo");
+    document.querySelector(".pacientes-inativos").innerHTML = pacientesInativos.length;
 
     dataProfissionais.forEach((profissional) => {
         document.querySelector("#profissionais").innerHTML += 
         `<option value="${profissional.profissionais_id}">${profissional.nome}</option>`
     })
 
-    
     dataPatients.forEach((paciente) => {
         
         document.querySelector("table").innerHTML += `

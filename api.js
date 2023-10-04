@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post("/enviarPaciente", async (req, res) => {
     const data = req.body
+
     if (Object.keys(data).length === 0) {
         res.status(400).send({
             message: "Não foi possível cadastrar"

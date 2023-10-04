@@ -45,6 +45,9 @@ a {
     height: 48px;
     border: none;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sidebar-btn:hover {
