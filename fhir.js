@@ -1,23 +1,18 @@
 const axios = require('axios');
-
-const aadTenant = "https://login.microsoftonline.com/";
-const tenantID = "b2693f3b-33d1-47fd-a938-4af2eaf21b1c";
-
-const appID = "8ecf5fbd-b08a-4ec3-a9c1-bd8f8ac5f7f6";
-const appSecret = "UA48Q~Dc2M8cGCPCOPvS5Y35Z5PafmIOa-tVRaHX";
+require('dotenv').config();
 
 const fhirEndpoint = "https://fiaphealthservices-fhirservice.fhir.azurehealthcareapis.com/";
 
 async function getAuthToken() {
     const config = {
         method: 'post', 
-        url : aadTenant + tenantID + "/oauth2/token/",
+        url : process.env.AAD_TENANT + process.env.TENANT_ID + "/oauth2/token/",
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
         data : {
-            "client_id": appID,
-            "client_secret": appSecret,
+            "client_id": process.env.APP_ID,
+            "client_secret": process.env.APP_SECRET,
             "grant_type" : "client_credentials",
             "resource": fhirEndpoint,
         }
@@ -76,11 +71,6 @@ async function postFhirPatient(accessToken, dataClient) {
     return resposta.data.id;
 
 }
-
-// async function main() {
-//     const accessToken = await getAuthToken()
-//     postPractitioner(accessToken)
-// }
 
 module.exports = {
   getAuthToken,

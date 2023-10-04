@@ -32,7 +32,6 @@ function listAllPatients() {
     return new Promise((resolve, reject) => {
 
         const db = createDBConnection();
-        const sql = "SELECT * FROM patients ORDER BY patient_id DESC;";
         const sql2 = `
         SELECT patient_id, patients.nome AS nomepaciente, email, telefone, data_nascimento, status, profissionais.nome AS nomeprofissional
         FROM patients

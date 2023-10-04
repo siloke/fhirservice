@@ -60,8 +60,6 @@ app.get("/listarProfissionais", async (req, res) => {
     res.send(listPractitioners);
 })
 
-
-
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`app listening on port ${port}`)
 })
